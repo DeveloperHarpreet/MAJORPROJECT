@@ -1,0 +1,60 @@
+<% layout('/layouts/boilerplate') %>
+
+<br>
+<br>
+  <h2>Create New Listing</h2>
+  <div class="row">
+    <div class="col-8 offset-2">
+
+ <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" name="listing[title]" placeholder="please give a cachy title" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="listing[description]" class="form-control" required></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="image-url" class="form-label">Upload Listing Image</label>
+    <input type="file" name="listing[image][url]" class="form-control" required>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="image-filename" class="form-label">Image Filename</label>
+    <input type="text" name="listing[image][filename]" class="form-control">
+  </div>
+
+  
+
+  <div class="row">
+     <div class="mb-3 col-md-4">
+    <label for="price" class="form-label">Price</label>
+    <input  name="listing[price]" class="form-control" required>
+  </div>
+
+  <div class="mb-3 col-md-8">
+    <label for="country" class="form-label">Country</label>
+    <input type="text" name="listing[country]" class="form-control" required>
+  </div>
+  </div>
+
+  <div class="mb-3 ">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" name="listing[location]" class="form-control" required>
+  </div>
+  <br>
+  <br>
+
+  <button type="submit" class="btn btn-dark add-btn">Create Listing</button>
+
+  <br>
+  <br>
+</form>
+
+    </div>
+</div>
